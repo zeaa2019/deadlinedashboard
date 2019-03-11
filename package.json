@@ -1,0 +1,25 @@
+{
+  "name": "notificationapp",
+  "version": "1.0.0",
+  "description": "notification dashboard",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zainababdulsalam2019/Notifcation-Web-Application.git"
+  },
+  "keywords": [
+    "dashboard"
+  ],
+  "author": "Zainab Abdulsalam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zainababdulsalam2019/Notifcation-Web-Application/issues"
+  },
+  "homepage": "https://github.com/zainababdulsalam2019/Notifcation-Web-Application#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
