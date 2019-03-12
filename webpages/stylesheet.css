@@ -1,0 +1,20 @@
+
+body {
+    border: 5px solid purple;
+    font-family: FreeMono, monospace;
+}
+
+header {
+    color: rgb(80, 0, 177);
+    font-size: 300%;
+    float: center;
+}
+
+
+h2 {
+  font-size: 250%;
+}
+
+#deadlines{
+  
+}
