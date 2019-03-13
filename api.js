@@ -1,9 +1,8 @@
 const mysql = require('mysql');
-const config = require('./config.json');
 const sqlPromise = initDb();
 
 async function initDb(){
-  return await mysql.createConnection(config.mysql);
+  return await mysql.createConnection(???.mysql);
 }
 
 async function saveDeadline(newDeadline){
