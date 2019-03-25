@@ -2,9 +2,16 @@
 
 const express = require('express');
 const app = express();
-const api = require('api');
+const router = express.Router();
 
 
 app.use(express.static('webpages'));
 
-app.listen(8080);
+router.get('/admin', postDeadline);
+
+function postDeadline() {
+
+  console.log("intnrfn");
+}
+
+app.listen(process.env.PORT || 8080);

@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/zainababdulsalam2019/Notifcation-Web-Application#readme",
   "dependencies": {
+    "config": "^3.0.1",
     "express": "^4.16.4",
     "mysql": "^2.16.0"
   }
