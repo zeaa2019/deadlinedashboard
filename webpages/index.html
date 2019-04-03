@@ -1,34 +1,47 @@
 <!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Dashboard Display</title>
+<title>Submit Deadlines</title>
 <link rel="stylesheet" title="Dashboard Style" href="stylesheet.css">
 <script src="deadlineapp.js"></script>
 
 
 <body>
-  <div class="g-signin2" data-onsuccess="onSignIn"></div>
-  <header>
-    <h1>Dashboard Display</h1>
-  </header>
+<picture>
+  <source srcset="uopLogo.jpg">
+  <img id="uopLogo" src="uopLogo.jpg" alt="UOP Logo">
+</picture>
 
-    <h2>Upcoming Coursework Deadline 2019/2020</h2>
-<marquee behaviour="scroll" direction="up" style="height:10"; >
-<div id="deadlines">
+<a href="dashboard.html">View Dashboard</a>
 
-    <ol id="webScriptDeadlines">WebScript Deadlines</ol>
+<form>
 
-    <ol id="cosineDeadlines">Cosine Deadlines</ol>
+  <div>
+    <label for="cwTitle">Coursework Title:</label>
+    <input type="text" id="cwTitle" name="cwTitle" placeholder="Enter Coursework Title" required autofocus>
+  </div>
 
-    <ol id="mathFunDeadlines">MathFun Deadlines</ol>
+  <div>
+   <label for="moduleName">Module Name:</label>
+   <select name="moduleNames">
+    <option value="inDad">INDAD</option>
+    <option value="inProg">INPROG</option>
+    <option value="car">CAR</option>
+    <option value="webFun">WEBFUN</option>
+    <option value="netFun">NETFUN</option>
+  </select>
+  </div>
 
-    <ol id="adProgDeadlines">AdProg Deadlines</ol>
+ <div>
+   <label for="cwDueDate">Coursework Due Date:</label>
+   <input type="date" id="cwDueDate" name="cwDueDate" required>
+ </div>
 
-    <ol id="dsalgDeadlines">Dsalg Deadlines</ol>
+ <div class="button">
+  <button type="submit" onclick="storeDeadline()">Submit Deadline</button>
+ </div>
+
+</form>
+<div>
+  <p id="brief">Welcome to the University of Portsmouth Deadline Dashboard Portal for 1st year Computer Science Modules. Enter the details of the coursework which will then be outputted onto the dashboard.</p>
 </div>
-</marquee>
-    <footer>
-      <script src="https://apis.google.com/js/platform.js" async defer></script>
-      <meta name="google-signin-client_id" content="932730332518-1dm7be4cur290j74cf4ptravobermtnq.apps.googleusercontent.com">
-    </footer>
-
 </body>
