@@ -4,7 +4,6 @@
 <link rel="stylesheet" title="Dashboard Style" href="stylesheet.css">
 <script src="index.js"></script>
 
-
 <body>
 <picture>
   <source srcset="uopLogo.jpg">
@@ -22,25 +21,23 @@
 
   <div>
    <label for="moduleName">Module Name:</label>
-   <select name="moduleNames">
-    <option value="inDad">INDAD</option>
-    <option value="inProg">INPROG</option>
-    <option value="car">CAR</option>
-    <option value="webFun">WEBFUN</option>
-    <option value="netFun">NETFUN</option>
+   <select name="moduleNames" id="optionsMenu">
+    <option value="inDad">Introduction to Databases</option>
+    <option value="inProg">Introduction to Programming</option>
+    <option value="car">Computer Artcitecture</option>
+    <option value="webFun">Web Fundamentals</option>
+    <option value="netFun">Network Fundamentals</option>
   </select>
   </div>
 
  <div>
    <label for="cwDueDate">Coursework Due Date:</label>
-   <input type="date" id="cwDueDate" name="cwDueDate" required>
+   <input type="date" id="cwDueDate" name="cwDueDate"required>
  </div>
 
  <div class="button">
-  <button id="submitBtn" type="submit" onclick="sucessMessage()">Submit Deadline</button>
+  <button id="submitBtn" type="submit" onclick="successMessage()">Submit Deadline</button>
  </div>
-
-
 </form>
 
 <div>
