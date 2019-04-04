@@ -15,7 +15,7 @@ label {
 #uopLogo {
 
   height: 200px;
-  width: 325px;
+  width: 335px;
 }
 
 
@@ -42,10 +42,7 @@ body {
 #brief {
   font-size: 30px;
 }
-#deadlines {
-  margin: 0 auto;
-  width: 400px;
-}
+
 
 form {
   margin: 0 auto;
@@ -69,6 +66,13 @@ input, textarea {
 
 input:focus, textarea:focus {
   border-color: #000;
+}
+
+#listOfDeadlines {
+  font-size: 20px;
+  text-align: center;
+
+
 }
 
 textarea {

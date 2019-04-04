@@ -2,7 +2,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Submit Deadlines</title>
 <link rel="stylesheet" title="Dashboard Style" href="stylesheet.css">
-<script src="deadlineapp.js"></script>
+<script src="index.js"></script>
 
 
 <body>
@@ -13,7 +13,7 @@
 
 <a href="dashboard.html">View Dashboard</a>
 
-<form>
+<form method="POST" action="api/deadline">
 
   <div>
     <label for="cwTitle">Coursework Title:</label>
@@ -37,10 +37,12 @@
  </div>
 
  <div class="button">
-  <button type="submit" onclick="storeDeadline()">Submit Deadline</button>
+  <button id="submitBtn" type="submit" onclick="sucessMessage()">Submit Deadline</button>
  </div>
 
+
 </form>
+
 <div>
   <p id="brief">Welcome to the University of Portsmouth Deadline Dashboard Portal for 1st year Computer Science Modules. Enter the details of the coursework which will then be outputted onto the dashboard.</p>
 </div>

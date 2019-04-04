@@ -2,7 +2,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Dashboard Display</title>
 <link rel="stylesheet" title="Dashboard Style" href="stylesheet.css">
-<script src="deadlineapp.js"></script>
+<script src="/dashboardapp.js"></script>
 
 
 <body>
@@ -12,24 +12,20 @@
   </header>
 
     <h2>Upcoming Coursework Deadlines 2019/2020 for 1st Years</h2>
-<marquee behaviour="scroll" direction="up" style="height:10"; >
+<marquee behaviour="scroll" direction="up" style="height:100"; >
 <div id="deadlines">
 
-    <ol id="webScriptDeadlines">WebScript Deadlines</ol>
-
-    <ol id="cosineDeadlines">Cosine Deadlines</ol>
-
-    <ol id="mathFunDeadlines">MathFun Deadlines</ol>
-
-    <ol id="adProgDeadlines">AdProg Deadlines</ol>
-
-    <ol id="dsalgDeadlines">Dsalg Deadlines</ol>
+    <ul id="listOfDeadlines">Deadlines</ul>
 </div>
 
 </marquee>
     <footer>
       <script src="https://apis.google.com/js/platform.js" async defer></script>
       <meta name="google-signin-client_id" content="932730332518-1dm7be4cur290j74cf4ptravobermtnq.apps.googleusercontent.com">
+      <picture>
+        <source srcset="uopLogo.jpg">
+        <img id="uopLogo" src="uopLogo.jpg" alt="UOP Logo">
+      </picture>
     </footer>
 
 </body>
