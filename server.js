@@ -3,24 +3,45 @@
 const express = require('express');
 const app = express();
 const jsonfile = require('jsonfile');
+const fs = require('fs');
+
 
 app.use(express.static('webpages'));
 
 app.use(express.urlencoded());
+
+function storeDeadline (cwTitle, moduleName, cwDueDate){
+fs.readFile('webpages/deadlines.json', function(err, deadlinesStorage) {
+  if (err) throw err
+
+  let listOfDeadlines = JSON.parse(deadlinesStorage)
+  listOfDeadlines.deadlines.push({
+    cwTitle: cwTitle,
+    moduleName: moduleName,
+    cwDueDate: cwDueDate
+  })
+  console.log(deadlinesStorage);
+
+  fs.writeFile('webpages/deadlines.json', JSON.stringify(listOfDeadlines), function(err) {
+    if (err) throw err
+  })
+})
+}
 
 app.post('/api/deadline', (req, res) => {
   const cwTitle = req.body.cwTitle;
   const moduleName = req.body.moduleName;
   const cwDueDate = req.body.cwDueDate;
 
-   // const file = 'webpages/deadlines.json';
-   // const obj = { cwTitle: cwTitle, moduleName: moduleName, cwDueDate: cwDueDate };
-   //
-   // jsonfile.writeFile(file, obj, { flag: 'a' });
-   
+  console.log(moduleName);
+
+  storeDeadline(cwTitle, moduleName, cwDueDate);
 
   res.redirect('http://localhost:8080/');
 });
+
+
+
 
 
 //port

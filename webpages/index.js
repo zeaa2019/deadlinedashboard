@@ -1,6 +1,6 @@
 'use strict';
 
-function sucessMessage(){
+function successMessage(){
 
-  window.alert("Sucess: Deadline Sent to Deadline Dashboard");
+  window.alert("Success: Deadline Sent to Deadline Dashboard");
 }

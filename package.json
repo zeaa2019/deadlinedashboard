@@ -23,6 +23,9 @@
     "config": "^3.0.1",
     "express": "^4.16.4",
     "jsonfile": "^5.0.0",
-    "mysql": "^2.16.0"
+    "local-storage": "^1.4.2",
+    "mongodb": "^3.2.2",
+    "mysql": "^2.16.0",
+    "node-fetch": "^2.3.0"
   }
 }

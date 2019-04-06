@@ -1,8 +1,6 @@
-
-
 header {
     color: rgb(80, 0, 177);
-    font-size: 300%;
+    font-size: 250%;
     float: center;
 }
 
@@ -12,12 +10,18 @@ label {
   text-align: right;
 }
 
+ul{
+  list-style-type: none;
+
+}
+
+
+
 #uopLogo {
 
   height: 200px;
   width: 335px;
 }
-
 
 h2 {
   font-size: 250%;
@@ -71,8 +75,6 @@ input:focus, textarea:focus {
 #listOfDeadlines {
   font-size: 20px;
   text-align: center;
-
-
 }
 
 textarea {

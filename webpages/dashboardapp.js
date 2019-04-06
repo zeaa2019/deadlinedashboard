@@ -1,19 +1,25 @@
 'use strict';
 
+
 function init() {
-  doFetchIt();
+  getDeadlines();
+
 }
 
-async function doFetchIt() {
-	const response = await fetch('deadlines.json');
-	const data = await response.json();
+async function getDeadlines() {
+	const res = await fetch('deadlines.json');
+	const listDeadlines = await res.json();
 
-  for (const i of data.deadlines) {
-    const li = document.createElement("li");
-    li.textContent = JSON.stringify(i);
-    window.listOfDeadlines.appendChild(li);
+  if(listDeadlines.deadlines.length >= 1){
+    for (const x of listDeadlines.deadlines) {
+      const li = document.createElement("li");
+      li.textContent = JSON.stringify(x);
+      window.listOfDeadlines.appendChild(li);
+
+    }
   }
 }
+
 
 
 window.addEventListener("load", init);
