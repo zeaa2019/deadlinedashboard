@@ -6,10 +6,12 @@ function init() {
 
 }
 
+//grabs deadlines stored from the server
 async function getDeadlines() {
 	const res = await fetch('deadlines.json');
 	const listDeadlines = await res.json();
 
+//iterates through json array of deadlines
   if(listDeadlines.deadlines.length >= 1){
     for (const x of listDeadlines.deadlines) {
       const li = document.createElement("li");
@@ -19,7 +21,5 @@ async function getDeadlines() {
     }
   }
 }
-
-
 
 window.addEventListener("load", init);

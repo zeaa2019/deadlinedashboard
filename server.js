@@ -2,9 +2,7 @@
 
 const express = require('express');
 const app = express();
-const jsonfile = require('jsonfile');
 const fs = require('fs');
-
 
 app.use(express.static('webpages'));
 
@@ -20,7 +18,6 @@ fs.readFile('webpages/deadlines.json', function(err, deadlinesStorage) {
     moduleName: moduleName,
     cwDueDate: cwDueDate
   })
-  console.log(deadlinesStorage);
 
   fs.writeFile('webpages/deadlines.json', JSON.stringify(listOfDeadlines), function(err) {
     if (err) throw err
@@ -39,10 +36,6 @@ app.post('/api/deadline', (req, res) => {
 
   res.redirect('http://localhost:8080/');
 });
-
-
-
-
 
 //port
 const port = process.env.PORT || 8080;
