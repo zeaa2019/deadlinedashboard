@@ -4,6 +4,10 @@ header {
     float: center;
 }
 
+li {
+  padding: 20px;
+}
+
 label {
   display: inline-block;
   width: 90px;

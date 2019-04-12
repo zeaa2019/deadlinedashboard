@@ -12,7 +12,7 @@
 
 <a href="dashboard.html">View Dashboard</a>
 
-<form method="POST" action="api/deadline">
+<form method="POST" action="api/deadline" onsubmit="successMessage()">
 
   <div>
     <label for="cwTitle">Coursework Title:</label>
@@ -26,11 +26,11 @@
 
  <div>
    <label for="cwDueDate">Coursework Due Date:</label>
-   <input type="date" id="cwDueDate" name="cwDueDate"required>
+   <input type="date" id="cwDueDate" name="cwDueDate" min="" max="2020-05-31" required>
  </div>
 
  <div class="button">
-  <button id="submitBtn" type="submit" onclick="successMessage()">Submit Deadline</button>
+  <button id="submitBtn" type="submit">Submit Deadline</button>
  </div>
 </form>
 

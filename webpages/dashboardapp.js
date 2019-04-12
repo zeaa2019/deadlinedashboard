@@ -3,12 +3,11 @@
 
 function init() {
   getDeadlines();
-
 }
 
 //grabs deadlines stored from the server
 async function getDeadlines() {
-	const res = await fetch('deadlines.json');
+	const res = await fetch('storage.json');
 	const listDeadlines = await res.json();
 
 //iterates through json array of deadlines
@@ -17,9 +16,17 @@ async function getDeadlines() {
       const li = document.createElement("li");
       li.textContent = JSON.stringify(x);
       window.listOfDeadlines.appendChild(li);
-
     }
   }
 }
 
-window.addEventListener("load", init);
+function autoRefresh(time) {
+	setTimeout("location.reload(true);",time);
+}
+
+
+window.onload = function() {
+  //refreshes webpage every minute
+  init();
+  autoRefresh(60000);
+};
