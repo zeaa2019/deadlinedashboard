@@ -14,9 +14,9 @@ function successMessage(){
 function dateValidation() {
 
 let currentDate = new Date();
-let year = currentDate.getFullYear();
-let month = currentDate.getMonth() + 1;
-let day = currentDate.getDate();
+const year = currentDate.getFullYear();
+const month = currentDate.getMonth() + 1;
+const day = currentDate.getDate();
 
     if(day < 10){
         day = '0' + day;
