@@ -7,11 +7,11 @@
 <body>
 <picture>
   <source srcset="uopLogo.jpg">
-  <img id="uopLogo" src="uopLogo.jpg" alt="UOP Logo">
+  <img class="uopLogo" src="uopLogo.jpg" alt="UOP Logo">
 </picture>
 
 <a href="dashboard.html">View Dashboard</a>
-
+<div class="main">
 <form method="POST" action="api/deadline" onsubmit="successMessage()">
 
   <div>
@@ -21,7 +21,24 @@
 
   <div>
    <label for="moduleName">Module Name:</label>
-   <input type="text" id="moduleName" name="moduleName" placeholder="Enter Module Name">
+   <select name="moduleName">
+    <option value="ADPROG">ADPROG</option>
+    <option value="CAR">CAR</option>
+    <option value="COSINE">COSINE</option>
+    <option value="DSALG">DSALG</option>
+    <option value="GCV">GCV</option>
+    <option value="INDAD">INDAD</option>
+    <option value="INDIVIDUAL PROJECT">INDIVIDUAL PROJECT</option>
+    <option value="INPROG">INPROG</option>
+    <option value="INSE">INSE</option>
+    <option value="MATHFUN">MATHFUN</option>
+    <option value="NETFUN">NETFUN</option>
+    <option value="PDAM">PDAM</option>
+    <option value="S&C">S&C</option>
+    <option value="TCS">TCS</option>
+    <option value="WEBFUN">WEBFUN</option>
+    <option value="WEBSCRIPT">WEBSCRIPT</option>
+  </select>
   </div>
 
  <div>
@@ -29,12 +46,18 @@
    <input type="date" id="cwDueDate" name="cwDueDate" min="" max="2020-05-31" required>
  </div>
 
+ <div>
+   <label for="cwDueDate">Time of Deadline:</label>
+   <input type="time" id="deadlineTime" name="deadlineTime" required>
+ </div>
+
  <div class="button">
   <button id="submitBtn" type="submit">Submit Deadline</button>
  </div>
 </form>
-
 <div>
+
+<div class="end">
   <p id="brief">Welcome to the University of Portsmouth Deadline Dashboard Portal for Computer Science Modules. Enter the details of the coursework which will then be outputted onto the dashboard.</p>
 </div>
 </body>
