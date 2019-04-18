@@ -6,22 +6,28 @@
 
 <body>
 <picture>
-  <source srcset="uopLogo.jpg">
+  <source srcset="/images/uopLogo.jpg">
   <img class="uopLogo" src="uopLogo.jpg" alt="UOP Logo">
 </picture>
 
-<a href="dashboard.html">View Dashboard</a>
+<a href="dashboard.html">View Dashboard
+  <picture>
+    <source srcset="/images/deadlinesImage.png">
+    <img id="deadlinesImage" src="/images/deadlinesImage.png" alt="Deadlines Icon">
+  </picture>
+</a>
+
 <div class="main">
 <form method="POST" action="api/deadline" onsubmit="successMessage()">
 
   <div>
     <label for="cwTitle">Coursework Title:</label>
-    <input type="text" id="cwTitle" name="cwTitle" placeholder="Enter Coursework Title" required autofocus>
+    <input class="form" type="text" id="cwTitle" name="cwTitle" placeholder="Enter Coursework Title" required autofocus>
   </div>
 
   <div>
    <label for="moduleName">Module Name:</label>
-   <select name="moduleName">
+   <select class="form" name="moduleName">
     <option value="ADPROG">ADPROG</option>
     <option value="CAR">CAR</option>
     <option value="COSINE">COSINE</option>
@@ -43,12 +49,12 @@
 
  <div>
    <label for="cwDueDate">Coursework Due Date:</label>
-   <input type="date" id="cwDueDate" name="cwDueDate" min="" max="2020-05-31" required>
+   <input class="form" type="date" id="cwDueDate" name="cwDueDate" min="" max="2020-05-31" required>
  </div>
 
  <div>
    <label for="cwDueDate">Time of Deadline:</label>
-   <input type="time" id="deadlineTime" name="deadlineTime" required>
+   <input class="form" type="time" id="deadlineTime" name="deadlineTime" required>
  </div>
 
  <div class="button">
