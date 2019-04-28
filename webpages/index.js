@@ -4,10 +4,12 @@ function init () {
   dateValidation();
 }
 
+//shows an alert on the homepage when a deadline has successfully been submitted
 function successMessage(){
   window.alert("Success: Deadline Sent to Deadline Dashboard");
 }
 
+//gets the present date & sets the min attribute on the form to that date
 function dateValidation() {
 
 let currentDate = new Date();
@@ -25,5 +27,5 @@ let day = currentDate.getDate();
 currentDate = year + '-' + month + '-' + day;
 document.getElementById("cwDueDate").setAttribute("min", currentDate);
 }
-
+//when the page is loaded the init function is called
 window.addEventListener("load", init);

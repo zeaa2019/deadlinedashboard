@@ -4,7 +4,7 @@ function init() {
   getDeadlines();
 }
 
-//grabs deadlines stored from the server
+//grabs deadlines stored in JSON from the server
 async function getDeadlines() {
 	const res = await fetch('storage.json');
 	const listDeadlines = await res.json();
@@ -24,12 +24,14 @@ async function getDeadlines() {
   }
 }
 
-function autoRefresh(time) {
+//refreshes the page so that any updates to the list of deadlines is shown
+//on the dashboard
+function backgroundRefresh(time) {
 	setTimeout("location.reload(true);",time);
 }
 
 window.onload = function() {
   init();
   //refreshes webpage every minute
-  autoRefresh(60000);
+  backgroundRefresh(60000);
 };

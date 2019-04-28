@@ -18,6 +18,12 @@ label {
   text-align: right;
 }
 
+#imgFooter {
+    position: fixed;
+    bottom:0;
+    left: 0
+}
+
 ul{
   list-style-type: none;
 }
