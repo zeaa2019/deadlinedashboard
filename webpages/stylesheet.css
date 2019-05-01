@@ -84,6 +84,8 @@ body {
 #listOfDeadlines {
   font-size: 20px;
   text-align: center;
+  position: relative;
+
 }
 
 textarea {
